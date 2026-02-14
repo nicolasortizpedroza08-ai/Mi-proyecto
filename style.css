@@ -1,0 +1,83 @@
+:root {
+    --bg: #f4f7f6;
+    --card-bg: #ffffff;
+    --primary: #4a90e2;
+    --alta: #ff4d4d;
+    --media: #ffad33;
+    --baja: #2ecc71;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+/* Tablero Kanban */
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.column {
+    background-color: #ebedf0;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 400px;
+}
+
+.task-list {
+    min-height: 350px;
+}
+
+/* Tarjetas de Tarea */
+.task-card {
+    background: var(--card-bg);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 5px solid gray;
+}
+
+.task-card.alta { border-left-color: var(--alta); }
+.task-card.media { border-left-color: var(--media); }
+.task-card.baja { border-left-color: var(--baja); }
+
+.task-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.btn-sm {
+    padding: 5px;
+    font-size: 12px;
+}

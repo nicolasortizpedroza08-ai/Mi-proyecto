@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgileFlow - Gestor de Proyectos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AgileFlow Manager</h1>
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Nueva tarea...">
+            <select id="priorityInput">
+                <option value="baja">Baja</option>
+                <option value="media">Media</option>
+                <option value="alta">Alta</option>
+            </select>
+            <button onclick="addTask()">Agregar</button>
+        </div>
+    </header>
+
+    <main class="board">
+        <section class="column" id="todo">
+            <h2><span class="dot todo"></span> Pendientes</h2>
+            <div class="task-list" id="todo-list"></div>
+        </section>
+
+        <section class="column" id="inprogress">
+            <h2><span class="dot inprogress"></span> En Proceso</h2>
+            <div class="task-list" id="inprogress-list"></div>
+        </section>
+
+        <section class="column" id="done">
+            <h2><span class="dot done"></span> Finalizado</h2>
+            <div class="task-list" id="done-list"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
